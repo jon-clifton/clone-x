@@ -13,5 +13,7 @@ run = True
 
 while run:
     minted = contract_instance.functions.getAmountMinted().call()
-    print(minted)
+    remaining = 20000 - minted
+    pct = remaining / 20000 * 100
+    print(f'{remaining} VIALs ({pct}%) remaining')
     time.sleep(5)
